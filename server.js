@@ -84,7 +84,6 @@ var server = net.createServer(function(c) {
 					} else if (regExKeys.listMessages.test(input)) {
 						input = input.split(' ')
 						messageSystem = JSON.parse(fs.readFileSync('users.json'));
-											input = input.split(' ')
 						var errCount = 0
 						for (i = 0; i < messageSystem.length; i++) {
 
@@ -120,7 +119,6 @@ var server = net.createServer(function(c) {
 						messageSystem = JSON.parse(fs.readFileSync('users.json'));
 
 						input = input.split(' ')
-										input = input.split(' ')
 						var errCount = 0
 						for (i = 0; i < messageSystem.length; i++) {
 
@@ -169,7 +167,6 @@ var server = net.createServer(function(c) {
 					} else if (regExKeys.newPW.test(input)) {
 						input = input.split(' ')
 						messageSystem = JSON.parse(fs.readFileSync('users.json'));
-											input = input.split(' ')
 						var errCount = 0
 						for (i = 0; i < messageSystem.length; i++) {
 
@@ -197,7 +194,6 @@ var server = net.createServer(function(c) {
 					} else if (regExKeys.delete.test(input)) {
 						input = input.split(' ')
 						messageSystem = JSON.parse(fs.readFileSync('users.json'));
-											input = input.split(' ')
 						var errCount = 0
 						for (i = 0; i < messageSystem.length; i++) {
 
