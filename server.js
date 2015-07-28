@@ -69,7 +69,7 @@ var server = net.createServer(function(c) {
 						}
 						
 					}
-						if (errCount === i-1 && !flag) {
+						if (errCount === i && !flag) {
 									c.write('No user by that name\r\n')
 									return false;
 								}
@@ -103,7 +103,11 @@ var server = net.createServer(function(c) {
 						}
 						
 					}
-						if (errCount === i-1 && !flag) {
+					console.log(index)
+					console.log(errCount)
+					console.log(i)
+					console.log(flag)
+						if (errCount === i && !flag) {
 									c.write('No user by that name\r\n')
 									return false;
 								}
@@ -142,7 +146,7 @@ var server = net.createServer(function(c) {
 						}
 						
 					}
-						if (errCount === i-1 && !flag) {
+						if (errCount === i && !flag) {
 									c.write('No user by that name\r\n')
 									return false;
 						}	if (input[2] != messageSystem[index].pw) {
@@ -194,7 +198,7 @@ var server = net.createServer(function(c) {
 						}
 						
 					}
-						if (errCount === i-1 &&!flag) {
+						if (errCount === i &&!flag) {
 									c.write('No user by that name\r\n')
 									return false;
 								}
@@ -226,7 +230,7 @@ var server = net.createServer(function(c) {
 						}
 						
 					}
-						if (errCount === i-1 && !flag) {
+						if (errCount === i && !flag) {
 									c.write('No user by that name\r\n')
 									return false;
 								}
@@ -266,7 +270,7 @@ var server = net.createServer(function(c) {
 						}
 						
 					}
-						if (errCount === i-1 && !flag) {
+						if (errCount === i && !flag) {
 									c.write('No user by that name\r\n')
 									return false;
 								}
