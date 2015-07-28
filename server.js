@@ -113,7 +113,7 @@ var server = net.createServer(function(c) {
 						}
 						c.write("You currently have " + messageSystem[index].messages.length.toString() + " messages, of which " + falseCount.toString() + " are unread\r\n")
 						if (messageSystem[index].messages.length != 0) {
-							c.write("The most recent message is # " + (messageSystem[index].messages.length - 1).toString() + " which was left on " + messageSystem[index].messages[i - 1].timeStamp)
+							c.write("The most recent message is # " + (messageSystem[index].messages.length - 1).toString() + " which was left on " + messageSystem[index].messages[i - 1].timeStamp + "\r\n")
 						}
 						
 					} else if (regExKeys.retrieve.test(input)) {
@@ -289,7 +289,7 @@ var server = net.createServer(function(c) {
 						c.destroy()
 						process.exit()
 					} else if (regExKeys.logOut.test(input)) {
-						c.write('Thank you for using Messamatron 9000\r\nHave a nice Day')
+						c.write('Thank you for using Messamatron 9000\r\nHave a nice Day\r\n')
 						c.destroy()
 					} else if(regExKeys.listFunc.test(input)){
 						listFunc()
