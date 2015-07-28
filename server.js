@@ -143,10 +143,6 @@ var server = net.createServer(function(c) {
 								c.write(chalk.gray.bold("Message #"+i +"\r\n"))
 								c.write(messageSystem[index].messages[i].content + "\r\n-----------------------\r\n")
 								messageSystem[index].messages[i].read = true;
-
-								html = fs.readFileSync('templateAll.ejs', 'utf8')
-								template = ejs.render(html, {
-									message: messageSystem[index]
 								})
 								fs.writeFileSync('message.html', template)
 								fs.writeFileSync('users.json', JSON.stringify(messageSystem))
