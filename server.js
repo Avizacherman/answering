@@ -58,18 +58,18 @@ var server = net.createServer(function(c) {
 						var errCount = 0
 						for (i = 0; i < messageSystem.length; i++) {
 
-							if (messageSystem[i].user.toLowerCase() != input[1].toLowerCase()) {
-
+							if (messageSystem[i].user.toLowerCase() === input[1].toLowerCase()) {
+									var index = i
+								} 
+							 else {
 								if (errCount === i) {
 									c.write('No user by that name\r\n')
 									return false;
 								}
 								errCount++
-
-							} else {
-								var index = i
-							}
+							
 						}
+					}
 						input.shift()
 						input.shift()
 						input = input.join(' ')
@@ -84,22 +84,22 @@ var server = net.createServer(function(c) {
 					} else if (regExKeys.listMessages.test(input)) {
 						input = input.split(' ')
 						messageSystem = JSON.parse(fs.readFileSync('users.json'));
+											input = input.split(' ')
 						var errCount = 0
 						for (i = 0; i < messageSystem.length; i++) {
 
-							if (messageSystem[i].user.toLowerCase() != input[1].toLowerCase()) {
+							if (messageSystem[i].user.toLowerCase() === input[1].toLowerCase()) {
+									var index = i
+								} 
+							 else {
 								if (errCount === i) {
 									c.write('No user by that name\r\n')
 									return false;
 								}
 								errCount++
-
-							} else {
-								var index = i
-							}
-
+							
 						}
-
+					}
 						var trueCount = 0;
 						var falseCount = 0;
 						for (i = 0; i < messageSystem[index].messages.length; i++) {
@@ -120,21 +120,22 @@ var server = net.createServer(function(c) {
 						messageSystem = JSON.parse(fs.readFileSync('users.json'));
 
 						input = input.split(' ')
+										input = input.split(' ')
+						var errCount = 0
 						for (i = 0; i < messageSystem.length; i++) {
 
-							if (messageSystem[i].user.toLowerCase() != input[1].toLowerCase()) {
-
+							if (messageSystem[i].user.toLowerCase() === input[1].toLowerCase()) {
+									var index = i
+								} 
+							 else {
 								if (errCount === i) {
 									c.write('No user by that name\r\n')
 									return false;
 								}
 								errCount++
-
-							} else {
-								var index = i
-							}
+							
 						}
-						if (input[2] != messageSystem[index].pw) {
+					}	if (input[2] != messageSystem[index].pw) {
 							c.write("Invalid Password\r\n")
 							return false
 						}
@@ -168,23 +169,23 @@ var server = net.createServer(function(c) {
 					} else if (regExKeys.newPW.test(input)) {
 						input = input.split(' ')
 						messageSystem = JSON.parse(fs.readFileSync('users.json'));
-						console.log(messageSystem)
+											input = input.split(' ')
+						var errCount = 0
 						for (i = 0; i < messageSystem.length; i++) {
 
-							if (messageSystem[i].user.toLowerCase() != input[2].toLowerCase()) {
-
+							if (messageSystem[i].user.toLowerCase() === input[1].toLowerCase()) {
+									var index = i
+								} 
+							 else {
 								if (errCount === i) {
 									c.write('No user by that name\r\n')
 									return false;
 								}
 								errCount++
-
-							} else {
-								var index = i
-								console.log(index)
-							}
+							
 						}
-						if (input[3] != messageSystem[index].pw) {
+					}
+							if (input[3] != messageSystem[index].pw) {
 							c.write("Invalid Password\r\n")
 							return false
 						}
@@ -196,20 +197,22 @@ var server = net.createServer(function(c) {
 					} else if (regExKeys.delete.test(input)) {
 						input = input.split(' ')
 						messageSystem = JSON.parse(fs.readFileSync('users.json'));
+											input = input.split(' ')
+						var errCount = 0
 						for (i = 0; i < messageSystem.length; i++) {
 
-							if (messageSystem[i].user.toLowerCase() != input[1].toLowerCase()) {
-
+							if (messageSystem[i].user.toLowerCase() === input[1].toLowerCase()) {
+									var index = i
+								} 
+							 else {
 								if (errCount === i) {
 									c.write('No user by that name\r\n')
 									return false;
 								}
 								errCount++
-
-							} else {
-								var index = i
-							}
+							
 						}
+					}
 						if (input[2] != messageSystem[index].pw) {
 							c.write("Invalid Password\r\n")
 							return false
@@ -231,20 +234,21 @@ var server = net.createServer(function(c) {
 						messageSystem = JSON.parse(fs.readFileSync('users.json'));
 
 						input = input.split(' ')
+						var errCount = 0
 						for (i = 0; i < messageSystem.length; i++) {
 
-							if (messageSystem[i].user.toLowerCase() != input[1].toLowerCase()) {
-
+							if (messageSystem[i].user.toLowerCase() === input[1].toLowerCase()) {
+									var index = i
+								} 
+							 else {
 								if (errCount === i) {
 									c.write('No user by that name\r\n')
 									return false;
 								}
 								errCount++
-
-							} else {
-								var index = i
-							}
+							
 						}
+					}
 						if (input[2] != messageSystem[index].pw) {
 							c.write("Invalid Password\r\n")
 							return false
