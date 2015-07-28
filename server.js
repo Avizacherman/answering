@@ -60,7 +60,7 @@ var server = net.createServer(function(c) {
 
 							if (messageSystem[i].user.toLowerCase() === input[1].toLowerCase()) {
 									var index = i
-									var flag = true
+									flag = true
 
 								} 
 							 else {
@@ -86,7 +86,7 @@ var server = net.createServer(function(c) {
 
 					} else if (regExKeys.listMessages.test(input)) {
 						input = input.split(' ')
-						var flag = true;
+						var flag = false;
 
 						messageSystem = JSON.parse(fs.readFileSync('users.json'));
 										var errCount = 0
@@ -94,7 +94,7 @@ var server = net.createServer(function(c) {
 
 							if (messageSystem[i].user.toLowerCase() === input[1].toLowerCase()) {
 									var index = i
-									var flag = true
+									flag = true
 
 								} 
 							 else {
@@ -134,7 +134,7 @@ var server = net.createServer(function(c) {
 
 							if (messageSystem[i].user.toLowerCase() === input[1].toLowerCase()) {
 									var index = i
-									var flag = true
+									flag = true
 								} 
 							 else {
 								errCount++
@@ -186,7 +186,7 @@ var server = net.createServer(function(c) {
 
 							if (messageSystem[i].user.toLowerCase() === input[2].toLowerCase()) {
 									var index = i
-									var flag = true
+									flag = true
 								} 
 							 else {
 								errCount++
@@ -217,7 +217,7 @@ var server = net.createServer(function(c) {
 
 							if (messageSystem[i].user.toLowerCase() === input[1].toLowerCase()) {
 									var index = i
-									var flag = true
+									flag = true
 
 								} 
 							 else {
@@ -257,7 +257,7 @@ var server = net.createServer(function(c) {
 
 							if (messageSystem[i].user.toLowerCase() === input[1].toLowerCase()) {
 									var index = i
-									var flag = true
+									flag = true
 
 								} 
 							 else {
