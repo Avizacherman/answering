@@ -199,7 +199,7 @@ var server = net.createServer(function(c) {
 					} else if (regExKeys.delete.test(input)) {
 						input = input.split(' ')
 						messageSystem = JSON.parse(fs.readFileSync('users.json'));
-						v				var errCount = 0
+						var errCount = 0
 						for (i = 0; i < messageSystem.length; i++) {
 
 							if (messageSystem[i].user.toLowerCase() === input[1].toLowerCase()) {
