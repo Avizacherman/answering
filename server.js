@@ -136,7 +136,7 @@ var server = net.createServer(function(c) {
 						if (errCount === i-1) {
 									c.write('No user by that name\r\n')
 									return false;
-								}	if (input[2] != messageSystem[index].pw) {
+						}	if (input[2] != messageSystem[index].pw) {
 							c.write("Invalid Password\r\n")
 							return false
 						}
@@ -173,8 +173,9 @@ var server = net.createServer(function(c) {
 						var errCount = 0
 						for (i = 0; i < messageSystem.length; i++) {
 
-							if (messageSystem[i].user.toLowerCase() === input[1].toLowerCase()) {
+							if (messageSystem[i].user.toLowerCase() === input[2].toLowerCase()) {
 									var index = i
+
 								} 
 							 else {
 								errCount++
