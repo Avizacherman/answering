@@ -60,6 +60,8 @@ var server = net.createServer(function(c) {
 
 							if (messageSystem[i].user.toLowerCase() === input[1].toLowerCase()) {
 									var index = i
+									var flag = true
+
 								} 
 							 else {
 								errCount++
@@ -67,7 +69,7 @@ var server = net.createServer(function(c) {
 						}
 						
 					}
-						if (errCount === i-1) {
+						if (errCount === i-1 && !flag) {
 									c.write('No user by that name\r\n')
 									return false;
 								}
@@ -175,7 +177,7 @@ var server = net.createServer(function(c) {
 
 							if (messageSystem[i].user.toLowerCase() === input[2].toLowerCase()) {
 									var index = i
-
+									var flag = true
 								} 
 							 else {
 								errCount++
@@ -183,7 +185,7 @@ var server = net.createServer(function(c) {
 						}
 						
 					}
-						if (errCount === i-1) {
+						if (errCount === i-1 &&!flag) {
 									c.write('No user by that name\r\n')
 									return false;
 								}
@@ -205,6 +207,8 @@ var server = net.createServer(function(c) {
 
 							if (messageSystem[i].user.toLowerCase() === input[1].toLowerCase()) {
 									var index = i
+									var flag = true
+
 								} 
 							 else {
 								errCount++
@@ -212,7 +216,7 @@ var server = net.createServer(function(c) {
 						}
 						
 					}
-						if (errCount === i-1) {
+						if (errCount === i-1 && !flag) {
 									c.write('No user by that name\r\n')
 									return false;
 								}
@@ -242,6 +246,8 @@ var server = net.createServer(function(c) {
 
 							if (messageSystem[i].user.toLowerCase() === input[1].toLowerCase()) {
 									var index = i
+									var flag = true
+
 								} 
 							 else {
 								errCount++
@@ -249,7 +255,7 @@ var server = net.createServer(function(c) {
 						}
 						
 					}
-						if (errCount === i-1) {
+						if (errCount === i-1 && !flag) {
 									c.write('No user by that name\r\n')
 									return false;
 								}
