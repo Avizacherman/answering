@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Messages for <%=message.user%></title>
+</head>
+<body>
+	<h1>Messages for <%=message.user%></h1>
+	<%message.messages.forEach(function(item, index){%>
+		<h3> message # <%=index%> </h3>
+		<p><%=item.content%></p>
+	<%})%>
+</body>
+</html>
