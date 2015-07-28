@@ -53,7 +53,7 @@ var server = net.createServer(function(c) {
 						
 					} else if (regExKeys.sendMessage.test(input)) {
 						messageSystem = JSON.parse(fs.readFileSync('users.json'));
-
+						var flag = false;
 						input = input.split(' ')
 						var errCount = 0
 						for (i = 0; i < messageSystem.length; i++) {
@@ -86,6 +86,8 @@ var server = net.createServer(function(c) {
 
 					} else if (regExKeys.listMessages.test(input)) {
 						input = input.split(' ')
+						var flag = true;
+
 						messageSystem = JSON.parse(fs.readFileSync('users.json'));
 										var errCount = 0
 						for (i = 0; i < messageSystem.length; i++) {
@@ -122,6 +124,8 @@ var server = net.createServer(function(c) {
 						}
 						
 					} else if (regExKeys.retrieve.test(input)) {
+						var flag = false;
+
 						messageSystem = JSON.parse(fs.readFileSync('users.json'));
 
 						input = input.split(' ')
@@ -130,6 +134,7 @@ var server = net.createServer(function(c) {
 
 							if (messageSystem[i].user.toLowerCase() === input[1].toLowerCase()) {
 									var index = i
+									var flag = true
 								} 
 							 else {
 								errCount++
@@ -137,7 +142,7 @@ var server = net.createServer(function(c) {
 						}
 						
 					}
-						if (errCount === i-1) {
+						if (errCount === i-1 && !flag) {
 									c.write('No user by that name\r\n')
 									return false;
 						}	if (input[2] != messageSystem[index].pw) {
@@ -172,6 +177,8 @@ var server = net.createServer(function(c) {
 						}
 						
 					} else if (regExKeys.newPW.test(input)) {
+						var flag = false;
+
 						input = input.split(' ')
 						messageSystem = JSON.parse(fs.readFileSync('users.json'));
 						var errCount = 0
@@ -202,6 +209,7 @@ var server = net.createServer(function(c) {
 
 						
 					} else if (regExKeys.delete.test(input)) {
+						var flag = false;
 						input = input.split(' ')
 						messageSystem = JSON.parse(fs.readFileSync('users.json'));
 						var errCount = 0
@@ -240,6 +248,7 @@ var server = net.createServer(function(c) {
 						}
 						
 					} else if (regExKeys.retrieveHTML.test(input)) {
+						var flag = false;
 						messageSystem = JSON.parse(fs.readFileSync('users.json'));
 
 						input = input.split(' ')
